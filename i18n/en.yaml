@@ -31,3 +31,6 @@
 
 - id: code_copied
   translation: "copied!"
+
+- article:
+    page_views: "Views"
