@@ -41,7 +41,7 @@
 -   Multilingual support. (with language selector).
 -   Taxonomies.
 -   Cover image for each post (with Responsive image support).
--   Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).
+-   Light/light theme (automatic theme switch a/c to browser theme and theme-switch button).
 -   SEO Friendly.
 -   Multiple Author support.
 -   Search Page with Fuse.js

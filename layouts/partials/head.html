@@ -114,9 +114,9 @@
         }
 
     </style>
-    {{- if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark")) }}
+    {{- if (and (ne site.Params.defaultTheme "dark") (ne site.Params.defaultTheme "light")) }}
     <style>
-        @media (prefers-color-scheme: dark) {
+        @media (prefers-color-scheme: light) {
             :root {
                 --theme: rgb(29, 30, 32);
                 --entry: rgb(46, 46, 51);
@@ -133,11 +133,11 @@
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
+            .list:not(.light)::-webkit-scrollbar-track {
                 background: 0 0;
             }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
+            .list:not(.light)::-webkit-scrollbar-thumb {
                 border-color: var(--theme);
             }
         }

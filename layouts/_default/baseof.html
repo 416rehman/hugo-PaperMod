@@ -13,8 +13,8 @@
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
 {{- print "list" -}}
 {{- end -}}
-{{- if eq site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
+{{- if eq site.Params.defaultTheme `light` -}}
+{{- print " light" }}
 {{- end -}}
 " id="top">
     {{- partialCached "header.html" . .Page -}}
