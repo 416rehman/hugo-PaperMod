@@ -3,6 +3,52 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
+header.header {
+    border-bottom: 1px solid var(--border);
+}
+
+.main {
+    border: solid 1px var(--border);
+    border-top: solid 1px transparent;
+    padding: 0;
+}
+
+.list > .main {
+    border: none;
+    padding: 0;
+    justify-items: center;
+}
+
+.list > .main > article.first-entry {
+    margin: 0;
+}
+
+.list > .main > a > article {
+    width: 700px;
+    max-width: 100%;
+}
+
+.toc {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.toc .inner {
+    margin: 0;
+    padding: 10px 30px;
+}
+
+.toc details summary {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff0a;
+    margin: 0;
+}
+
+.toc details summary:hover {
+    color: var(--theme);
+    background-color: var(--primary);
+}
 
 /*External hrefs should have an icon*/
 .post-content a[href^='http']::after {
@@ -67,4 +113,56 @@ a:hover .post-entry * {
     font-size: 32px;
     float: right;
     writing-mode: vertical-rl;
+}
+
+.post-single .post-header h1 {
+    padding: var(--gap);
+}
+
+.post-single .post-header .post-meta {
+    padding: 0px var(--gap);
+}
+
+main > article > div.post-content > * {
+    padding: var(--gap);
+    margin: 0px;
+}
+
+main > article > div.post-content > ul {
+    padding: 0px calc(var(--gap) * 2);
+}
+
+/*if p has an img, make the padding 0*/
+main > article > div.post-content p:has(img) {
+    text-align: center;
+    color: var(--secondary);
+    padding: 0px;
+}
+
+main > article > div.post-content img {
+    border-radius: var(--radius);
+}
+
+main > article > div.post-content > h2 {
+    border-top: 1px solid var(--border);
+    background-color: #ffffff0f;
+}
+
+main > article > div.post-content > h3 {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-top: 1px dashed rgba(255, 255, 255, 0.06);
+    margin-top: var(--gap);
+}
+
+.post-content img {
+    justify-self: center;
+}
+
+.post-content {
+    border-bottom: 1px dotted var(--border);
+}
+.post-footer {
+    margin: 0;
+    padding: var(--gap);
+    border-bottom: 1px dotted var(--border);
 }

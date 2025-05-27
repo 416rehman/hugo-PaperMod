@@ -284,9 +284,8 @@
     font-size: 0.8em;
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1516px) {
     .toc.side {
-        padding: 6px;
         position: fixed;
         top: 128px;
         z-index: 1000;
