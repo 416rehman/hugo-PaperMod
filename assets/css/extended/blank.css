@@ -35,3 +35,36 @@ a:hover .post-entry {
 a:hover .post-entry * {
     color: var(--theme);
 }
+
+.post-content h3:after {
+    content: "/br";
+    font-weight: 400;
+    font-family: monospace;
+    opacity: 10%;
+    font-size: 12px;
+    float: right;
+    writing-mode: vertical-rl;
+    padding: 6px 0px;
+}
+
+.post-content h2:after {
+    content: "0x";
+    font-weight: 400;
+    font-family: monospace;
+    opacity: 10%;
+    font-size: 16px;
+    float: right;
+    writing-mode: vertical-rl;
+    top: 10px;
+    position: relative;
+}
+
+.post-title:after {
+    content: "-->";
+    font-weight: 400;
+    font-family: monospace;
+    opacity: 10%;
+    font-size: 32px;
+    float: right;
+    writing-mode: vertical-rl;
+}
