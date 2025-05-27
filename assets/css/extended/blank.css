@@ -24,8 +24,8 @@ header.header {
 }
 
 .list > .main > a > article {
-    width: 700px;
-    max-width: 100%;
+    max-width: 700px;
+    width: 100%;
 }
 
 .toc {
