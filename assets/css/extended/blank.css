@@ -7,6 +7,10 @@ header.header {
     border-bottom: 1px solid var(--border);
 }
 
+.body {
+    background-color: var(--theme);
+}
+
 .main {
     border: solid 1px var(--border);
     border-top: solid 1px transparent;
