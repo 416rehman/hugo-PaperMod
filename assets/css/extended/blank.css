@@ -7,8 +7,8 @@ header.header {
     border-bottom: 1px solid var(--border);
 }
 
-.body {
-    background-color: var(--theme);
+body {
+    background-color: var(--theme) !important;
 }
 
 .main {
