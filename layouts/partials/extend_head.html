@@ -2,3 +2,16 @@
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
+
+{{ if and .IsPage (not (or (eq .Layout "archives") (eq .Layout "search"))) }}
+    {{ $hash := hash.FNV32a .Permalink }}
+    {{ $r := mod $hash 41 }}
+    {{ $g := mod (div $hash 256) 41 }}
+    {{ $b := mod (div (div $hash 256) 256) 41 }}
+
+    <style>
+        body {
+            background: linear-gradient(316deg, var(--theme) 0%, var(--theme) 75%, rgb({{ $r }} {{ $g }} {{ $b }}) 100%) fixed;
+        }
+    </style>
+{{ end }}
