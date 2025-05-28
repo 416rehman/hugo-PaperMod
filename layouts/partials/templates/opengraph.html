@@ -35,7 +35,6 @@
     <meta property="og:type" content="website">
 {{- end }}
 
-{{- $generatedImage := false }}
 {{- if .Params.cover.image -}}
     {{- if (ne .Params.cover.relative true) }}
         <meta property="og:image" content="{{ .Params.cover.image | absURL }}">
@@ -43,30 +42,19 @@
         <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}">
     {{- end }}
 {{- else }}
-    {{- if eq .Section "posts" }}
-        {{ $generatedImage = partial "templates/_funcs/gen-opengraph-image" . }}
-    {{- end }}
-    {{- if $generatedImage }}
-        <meta property="og:image" content="{{ $generatedImage.Permalink }}">
-    {{- else }}
+{{/*    {{- if eq .Section "posts" }}*/}}
+{{/*        {{ $generatedImage = partial "templates/_funcs/gen-opengraph-image" . }}*/}}
+{{/*    {{- end }}*/}}
+{{/*    {{- if $generatedImage }}*/}}
+{{/*        <meta property="og:image" content="{{ $generatedImage.Permalink }}">*/}}
+{{/*    {{- else }}*/}}
         {{- with partial "_funcs/get-page-images" . }}
-            {{- range . | first 1 }}
+            {{- range . | first 6 }}
                 <meta property="og:image" content="{{ .Permalink }}">
             {{- end }}
         {{- end }}
-    {{- end }}
+{{/*    {{- end }}*/}}
 {{- end }}
-
-{{/* Image dimensions for better social media optimization */}}
-{{- if $generatedImage }}
-    <meta property="og:image:width" content="{{ $generatedImage.Width }}">
-    <meta property="og:image:height" content="{{ $generatedImage.Height }}">
-{{- else }}
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-{{- end }}
-
-<meta property="og:image:type" content="image/png">
 
 {{- with .Params.audio }}
     {{- range . | first 6 }}
