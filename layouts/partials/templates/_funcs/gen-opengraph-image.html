@@ -13,11 +13,4 @@
         )) }}
 
 {{ $img = resources.Copy (path.Join .Page.RelPermalink "gen.png") $img }}
-{{ $img = $img.Resize "1200x630" }}
-{{ $img = $img.Fill "1200x630" }}
-
-{{- if hugo.IsProduction -}}
-    {{- $img = $img.EmbedFingerprint -}}
-{{- end -}}
-
 {{- return $img -}}
